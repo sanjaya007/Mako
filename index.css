@@ -1,0 +1,521 @@
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.cal {
+  /*   width: 800px; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  margin: 20px 0;
+  width: 60%;
+}
+
+/* files  */
+.cal_files {
+  height: 100%;
+}
+
+/* file  */
+
+.service-box.hidden {
+  display: none;
+}
+
+.service-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #949494;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.service-box .mako-image {
+  width: 130px;
+  height: 130px;
+}
+
+.service-box .mako-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.service-box .mako-price {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.cal_file {
+  height: auto;
+  display: flex;
+  padding: 15px;
+  padding-top: 35px;
+  border: 1px solid #949494;
+  margin-bottom: 20px;
+}
+
+.cal_file_preview {
+  width: 20%;
+}
+
+.cal_file_preview_image {
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cal_file_preview_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.cal_file_preview_image .error-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffffbe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: tomato;
+  font-weight: bold;
+}
+
+.cal_file_preview_image .error-image.hidden {
+  display: none;
+}
+
+.cal_file_prop {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cal_file_prop_key {
+  font-weight: bold;
+}
+
+/* OPTIONS  */
+.cal_file_options {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+
+.cal_file_options select {
+  height: 25%;
+  background-color: #20829d;
+  color: #000000;
+  font-size: 14px !important;
+  outline: none;
+}
+
+.select-material.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  border-color: rgba(118, 118, 118, 0.3);
+}
+
+.select-delay.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  border-color: rgba(118, 118, 118, 0.3);
+}
+
+.cal_file_quantity {
+  width: 15%;
+}
+
+.cal_file_quantity_title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.cal_file_quantity_counter {
+  text-align: center;
+}
+
+.cal_file_quantity_counter input {
+  border: none;
+  width: 70% !important;
+  height: 40px;
+  margin: 0 10px;
+  background-color: #c1c1c1;
+  color: #000000;
+  border-radius: 13px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+}
+
+.cal_file_quantity_counter .quantity-btns {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cal_file_quantity_counter span {
+  font-size: 22px;
+  cursor: pointer;
+  background-color: #6aa84f;
+  padding: 0px 11px;
+  font-weight: bold;
+  border-radius: 99px;
+  background-color: #e6e6e6;
+}
+
+.cal_file_cost {
+  display: flex;
+  width: 40%;
+  padding: 5px;
+  border: 1px solid #949494;
+}
+
+.cal_file_cost_ind {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cal_file_cost_ind div {
+  height: 50%;
+}
+
+.cal_file_cost_ind div span {
+  font-weight: bold;
+}
+
+.cal_file_cost_total {
+  width: 50%;
+  text-align: center;
+}
+
+.cal_file_cost_total span {
+  font-weight: bold;
+}
+
+.cal_file_cost_total p {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* input  */
+
+.cal_input {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  background-color: #20829d;
+}
+
+.cal_input_label {
+  font-size: 25px;
+  /*   color: rgb(95, 94, 94); */
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*   border-color: rgb(128, 128, 128); */
+  border-color: #000000;
+  /*   background-color: rgb(241, 241, 241); */
+  background-color: #20829d;
+  border-style: dashed;
+}
+
+.cal_input_input {
+  display: none;
+}
+
+.cal.link-btns {
+  margin-top: 30px;
+}
+
+.cal .cart-link.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.cal.link-btns a {
+  background-color: #20829d;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.cal_input_input {
+  display: none;
+}
+
+.cal_file {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.cal_file .dxf-filename {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #20829d;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.cal_file .dxf-filename a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.cal_file .dxf-filename p {
+  margin: 0;
+  font-weight: bold !important;
+}
+
+.cal_file .dxf-filename span {
+  font-weight: normal;
+}
+
+.cal_file .add-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 8px;
+  right: 15px;
+}
+
+.cal_file .add-box.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cal_file .add-box a {
+  text-decoration: none;
+  background-color: #f7f7f7;
+  padding: 7px 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  color: #20829d;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.cal_file .add-box a:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cost-to-cut {
+  margin: 0;
+}
+
+.cost-to-cut-time {
+  margin: 0;
+}
+
+.cost-to-material {
+  margin: 0;
+}
+
+.delete-box {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.delete-box:hover {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  z-index: 999;
+}
+
+.loader.hidden {
+  display: none;
+}
+
+.total-sum {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.total-sum p {
+  background-color: #20829d;
+  padding: 12px;
+  border: 2px solid #000000;
+  font-weight: bold;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.total-sum.hidden {
+  display: none;
+}
+
+.cart__product-qty {
+  pointer-events: none;
+}
+
+.edit_cart_option {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 767px) {
+  .cal_file {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cal_file > div {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cal_file_preview {
+    align-items: center;
+  }
+  .cal_file_options select {
+    margin: 5px 0;
+  }
+  .cal_file_quantity_counter {
+    margin-top: 0;
+  }
+  .cal_file_cost {
+    flex-direction: row !important;
+    margin-bottom: 20px;
+  }
+  .cal_file_options {
+    margin: 20px 0 !important;
+  }
+  .cal_file_quantity {
+    margin-bottom: 20px;
+  }
+  .add-box {
+    width: 100% !important;
+  }
+  .service-box {
+    flex-direction: column;
+  }
+  .service-box .mako-desc {
+    margin: 5px 0;
+  }
+  .service-box .mako-desc p {
+    margin: 0;
+  }
+  .service-box .mako-price p {
+    margin: 0;
+  }
+  .cal_file .dxf-filename {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .total-sum {
+    flex-direction: column-reverse;
+  }
+  .total-sum p {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .cart__row--table .grid__item.one-third {
+    position: relative;
+  }
+  .cart__row--table .grid__item.one-third::after {
+    content: "Qty";
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12.5px);
+  }
+  /*    .cart__row--table .grid__item.two-thirds{
+    position: relative;
+  }
+  .cart__row--table .grid__item.two-thirds::after{
+    content: "Price";
+    position: absolute;
+    left: 300px;
+    top: calc(50% - 12.5px);
+  } */
+}
+
+@media screen and (max-width: 450px) {
+  .cart__row--table .grid__item.one-third::after {
+    right: -130px;
+  }
+  /*   .cart__row--table .grid__item.two-thirds::after{
+    left: 110px;
+  } */
+}
+
+@media screen and (max-width: 375px) {
+  .add-box {
+    width: 70% !important;
+  }
+}
+/* @media screen and (max-width: 320px) {
+  .cart__row--table .grid__item.two-thirds::after{
+    left: 70px;
+  }
+} */

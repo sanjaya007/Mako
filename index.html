@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="cal">
+        <div class="cal_files">
+          <div class="service-box hidden">
+            <div class="mako-image">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0428/1342/3772/files/logo.png?v=1619445313"
+                alt="service"
+              />
+            </div>
+            <div class="mako-desc">
+              <p>GESTION DE PROJET</p>
+            </div>
+            <div class="mako-price">
+              <span>Cout Total</span>
+              <p>25 €</p>
+            </div>
+          </div>
+        </div>
+        <div class="cal_input" for="upload-photo">
+          <label for="upload-photo" class="cal_input_label">
+            <span> Click to upload file</span>
+          </label>
+          <input
+            type="file"
+            name="photo"
+            multiple="multiple"
+            id="upload-photo"
+            class="cal_input_input"
+          />
+        </div>
+      </div>
+      <div class="cal link-btns">
+        <a href="#" class="cart-link disabled"> Go To Cart </a>
+        <a href="#" class="tutorial-link"> Tutorial </a>
+      </div>
+      <div class="loader hidden">
+        <img src="https://i.imgur.com/tkvLDAH.gif" alt="loading" />
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
